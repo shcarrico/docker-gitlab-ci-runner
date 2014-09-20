@@ -16,8 +16,8 @@ RUN /app/setup/install
 ADD assets/init /app/init
 RUN chmod 755 /app/init
 
-RUN apt-get install -y nodejs nodejs-legacy npm
-RUN npm install -g phantomjs grunt-cli
+RUN apt-get update && apt-get install -y build-essential bzip2 nodejs nodejs-legacy npm
+RUN npm install -g phantomjs grunt-cli gulp
 
 VOLUME ["/home/gitlab_ci_runner/data"]
 

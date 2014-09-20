@@ -65,7 +65,7 @@ case "$1" in
     appStart
     ;;
   app:setup)
-    appSetup
+    appSetup $2 $3
     ;;
   app:help)
     appHelp
